@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../static/css/client_jg_indexcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity= "sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+{% csrf_token %}
+
+<header>
+<div class="navbar">
+<div class="main-container">
+
+
+    <div class="nav-section1">
+        <div class="site-log">
+            <img src="C:\Users\abhishek sahoo\Downloads\free1.png" alt="logo" width="100px">
+        </div>
+
+        <div class="nav-jobs">
+            <span>Browse jobs</span>
+        </div>
+
+        <div class="nav-noti">
+            <i class="fa-regular fa-bell"></i>
+        </div>
+    </div>
+
+
+    <div class="nav-search">
+        <input class="search-box hov1" type="text" name=""  size="73px" placeholder="Search relevent jobs , company ,skills">
+
+        <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+    </div>
+
+
+    <div class="nav-btn">
+
+        <div class="nav-buttons">
+            <a href="{% url 'client_js_signup' %}"> <button type="button" class="btn-login btn-pink">Login</button></a>
+        </div>
+
+        <div class="nav-buttons">
+           <button type="button" class="btn-signup btn-pink">Sign Up</button></a>
+        </div>
+
+        <div class="nav-buttons">
+            <button type="button" class="btn-hired btn-pink">Get Hired</button></a>
+        </div>
+
+    </div>
+</div>
+</div>
+
+</header>
+
+<div class="pannel">
+    <div class="p1"><span class="pannel-data">Graphics & Design</span></div>
+    <div class="p1"><span class="pannel-data">Programming & Tech</span></div>
+    <div class="p1"><span class="pannel-data">business</span></div>
+    <div class="p1"><span class="pannel-data">Art and animation</span></div>
+    <div class="p1"><span class="pannel-data">Writing & Translation</span></div>
+
+</div>
+
+<div class="job-pannel">
+    <div class="card">
+        <img src="image.jpg" alt="Card Image">
+        <div class="card-content">
+          <h2>post a job</h2>
+          <p>want a freelancer for your job</p>
+          <a href="{% url 'job_detail_form' %}"><button type="button" class="btn-bl">Post Job</button></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="image.jpg" alt="Card Image">
+        <div class="card-content">
+          <h2>Admin-Berojgarmate</h2>
+          <p>only for the Admin of site.</p>
+         <a href="{% url 'admin_signup' %}"><button type="button" class="btn-bl">Sign Up</button></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="image.jpg" alt="Card Image">
+        <div class="card-content">
+          <h2>Applied Freelancers</h2>
+          <p>check the status of the applicants for your jobs</p>
+          <a href="{% url 'job_apply_details' %}"><button type="button" class="btn-bl">Sign Up</button></a>
+        </div>
+      </div>
+</div>
+
+
+{% for i in crse %}
+<div class="job-advt">
+
+
+
+      <div class="card-advt-job">
+
+        <div class="card-content-advt">
+          <h2>name of job giver{{i.first_name}}</h2>
+          <p>only for the Admin of site.</p>
+          <a href="#"><button type="button" class="btn-bl">Sign Up</button></a>
+        </div>
+      </div>
+
+</div>
+
+{% endfor %}
+
+
+
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <h1>Berojgarmate.com i am a page of job givver agfter login</h1>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

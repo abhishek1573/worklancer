@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0; box-sizing: border-box;font-family: 'Courier New', Courier, monospace;
+        }
+        .grand-parent{
+            width: 100vw;height: 100vh;
+            background: #dfe6e9;color: #fff;
+        }
+        h1{
+            font-size: 4em;
+            padding: 50px 0;
+            text-align: center;
+            color: #000;
+        }
+        p{
+            text-align: center;
+        }
+        .parent{
+
+            width: 80vw;height: auto;margin: auto;
+            display: flex; justify-content: space-around;
+            flex-wrap: wrap; background-color: rgba(42, 38, 4, 0.183);
+        }
+        .child{
+           height: 200px;
+            background: #81ecec;
+            box-shadow: 0 0 20px #bac3c3;
+            flex:1 1 200px;
+            margin: 10px;
+        }
+        .child:first-child{
+            background: #ffbe76;
+
+        }
+        .child:last-child{
+            background: #ff7979;
+
+        }
+        @media(max-width : 768px){
+            .grand-parent{
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grand-parent">
+        <h1>Services</h1>
+        <div class="parent">
+            <div class="child">
+                <p>Left</p>
+            </div>
+            <div class="child">
+                <p>Center</p>
+            </div>
+            <div class="child">
+                <p>Right</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
