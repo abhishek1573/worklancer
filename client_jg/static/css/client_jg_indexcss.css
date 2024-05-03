@@ -1,0 +1,314 @@
+   header{
+
+
+
+}
+
+.main-container{
+    max-width: 1300px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background: linear-gradient(white,rgb(208, 205, 205));
+}
+
+.nav-section1{
+    display: flex;
+    width: 323px;
+
+
+
+
+}
+
+.site-log{
+    width: 40%;
+    height: 100%;
+
+   padding: 6px;
+
+}
+
+.nav-jobs{
+    align-items: center;
+    height: 100%;
+    font-weight: 600;
+    padding: 10px;
+    margin-top: 10px;
+
+
+}
+
+.nav-noti{
+    align-items: center;
+    width: 60px;
+    height: 80%;
+
+    padding:13px;
+    font-size: 20px;
+}
+
+
+
+.nav-search{
+    display: flex;
+    width: 605px;
+
+    height:100%;
+
+    padding: 1px;
+    align-items: right;
+}
+
+.search-box{
+    height: 40px;
+    border-radius: 3px;
+    border-color: aliceblue;
+}
+
+.search-icon{
+    color: white;
+    height: 39px;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    font-size: 18px;
+    background-color: black;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+
+
+
+
+.nav-btn{
+    display: flex;
+    padding: 10px;
+    justify-content: space-evenly ;
+
+}
+
+
+.nav-buttons{
+    justify-content: space-evenly;
+    padding: 5px;
+
+}
+
+.btn-pink{
+
+    padding: 10px;
+    background-color: #E60278;
+    border-radius: 8px ;
+    border-color: white;
+    color: white;
+}
+
+.btn-pink:hover{
+    background-color: #ffaed8;
+    color: black;
+}
+
+.pannel{
+    display: flex;
+    background-color: black;
+    color: white;
+}
+
+.pannel-data{
+    height: 28px;
+    padding-inline: 19px;
+    font-weight: 500;
+}
+
+.p1:hover{
+
+    text-decoration: underline;
+    transition: text-decoration 0.3s;
+    text-decoration-color:4px rgb(253, 14, 253) ;
+    text-decoration-line:underline ;
+}
+
+.p1{
+    height: 27px;
+}
+
+
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Set the maximum width of the card */
+    margin: 20px; /* Add spacing between cards */
+    background-color: #fff;
+  }
+
+
+  .job-pannel{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  /* Style for the card image */
+  .card img {
+    max-width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  /* Style for the card content */
+  .card-content {
+    padding: 10px;
+  }
+
+  /* Style for the card title */
+  .card-content h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  /* Style for the card description */
+  .card-content p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+  /* Style for the "Learn More" link */
+  .card-content a {
+    text-decoration: none;
+    color: #007bff;
+  }
+
+
+.btn-bl{
+    background-color:rgb(0, 72, 255) ;
+    color: white;
+    border-radius: 6px;
+    border-color: white;
+    font-weight: 500;
+}
+
+
+
+.btn-bl:hover{
+    background-color:rgb(228, 237, 251) ;
+    color: rgb(217, 0, 246);
+    border-radius: 6px;
+    border-color: white;
+}
+
+
+
+.job-advt{
+    margin: 20px;
+   justify-content: center;
+    display: flex;
+    padding-inline: 10px;
+    width: 100vw;
+}
+
+
+
+.card-advt-job{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+     flex-wrap: wrap;
+    width: 80vw;height: auto;margin: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     /* Set the maximum width of the card */
+    margin: 20px; /* Add spacing between cards */
+    background-color: #fff;
+}
+
+.card-content-advt {
+    padding: 10px;
+  }
+
+  .card-content-advt h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+
+  .card-content-advt p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+
+  /* Style for the About Us section */
+#about {
+    background-color: #f4f4f4; /* Background color for the about section */
+    padding: 50px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-container h2 {
+    color: #333; /* Text color for the about section title */
+    font-size: 24px;
+}
+
+.about-container p {
+    color: #777; /* Text color for the about section content */
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Style for the footer */
+footer {
+    background-color: #333; /* Background color for the footer */
+    color: #fff; /* Text color for the footer */
+    padding: 20px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo h3 {
+    font-size: 24px;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+}
+
+.footer-links li {
+    margin-right: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-social a {
+    margin-left: 20px;
+}
+
+
+.footer-links ul li a{
+        color: white;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 300;
+}

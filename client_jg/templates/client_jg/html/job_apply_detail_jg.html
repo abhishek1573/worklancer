@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Table with Navbar</title>
+    <link rel="stylesheet" href="../../../static/css/client_jg_job_apply.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="table-container">
+        <table class="colorful-table">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>E mail </th>
+                    <th>Phone Number</th>
+                    <th>Desired Position</th>
+                    <th>Expected Salary</th>
+                    <th>Resume</th>
+                    <th>About</th>
+                    <th>D.O.B</th>
+                    <th>Highest Qulification</th>
+                    <th>Skills</th>
+                </tr>
+            </thead>
+
+            <tbody>
+{% for i in crse %}
+            <tr>
+                <td>{{i.full_name}}</td>
+                <td>{{i.email_id}} </td>
+                <td>{{i.phone_number}}</td>
+                <td>{{i.position}}</td>
+                <td>{{i.salary}}</td>
+                <td>{{i.resume}}</td>
+                <td>{{i.about}}</td>
+                <td>{{i.date_of_birth}}</td>
+                <td>{{i.heighest_qualification}}</td>
+                <td>{{i.skills}}</td>
+            </tr>
+{% endfor %}
+
+                <!-- Add table data here -->
+            </tbody>
+
+        </table>
+
+
+    </div>
+</body>
+</html>
