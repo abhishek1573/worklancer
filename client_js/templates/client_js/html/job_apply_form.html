@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="../../../static/css/job_apply_form.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="main-container">
+
+        <div class="container-1">
+            <div class="card-left">
+                {% for i in job %}
+                <h2>{{i.form_job_title}}</h2>
+
+                <div class="image-section"></div>
+                <h4 class="card-title">skills : {{i.form_job_skills}} </h4>
+                <div class="card-left-content">
+                <h2 class="card-title brand" >worklancer.com</h2>
+            {% endfor %}
+            </div>
+            </div>
+        </div>
+
+
+
+        <div class="container-form">
+            <h1>Job Application Form</h1>
+            <form action="{% url 'jobapply'%}" method="post" >
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+
+                <div class="form-group">
+                    <div class="contact">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" >
+
+                        <label for="phno">Phone number:</label>
+                        <input type="text" id="phno" name="phno" >
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="position">Desired Position:</label>
+                    <input type="text" id="position" name="position" >
+                </div>
+
+                <div class="form-group">
+                    <label for="salary">Expected salary </label>
+                    <input type="text" id="salary" name="salary" >
+                </div>
+
+                <div class="form-group">
+                    <label for="resume">Upload Resume/CV:</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" >
+                </div>
+
+                <div class="form-group">
+                    <label for="aboutyou">Describe Your self</label>
+                    <textarea id="aboutyou" name="aboutyou" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Skills </label>
+                    <input type="date" id="dob" name="dob" >
+                </div>
+
+                <div class="form-group">
+                    <label for="heighest_qualif">Highest Qulification</label>
+                    <input type="text" id="heighest_qualif" name="heighest_qualif" >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="skill">Skills </label>
+                    <input type="text" id="skill" name="skill" >
+                </div>
+
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

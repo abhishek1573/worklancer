@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title </title>
+    <link rel="stylesheet" href="../../../static/css/client_js_signup_page.css">
+</head>
+<body>
+
+
+
+
+    <div class="container">
+        <h2>client hello Signup</h2>
+        <form action="{% url 'client_js_signup'%}" method="post">
+            {% csrf_token %}
+          <input type="text" name="form3Example1m"id="form3Example1m" >First Name
+          <input  type="text" name="form3Example1n"id="form3Example1n">Last Name<br>
+            <br><input  type="file" name="profile_photo"id="profile_photo">profile Photo
+
+            <!-- check_username.html -->
+            <input  type="text" name="userid"id="userid">Userid
+{% if response_data.exists %}
+    <p>{{ response_data.type|title }} '{{ response_data.value }}' is already taken.</p>
+
+{% endif %}
+
+
+
+          <input  type="text" name="form3Example1m1"id="form3Example1m1">City
+          <input  type="text" name="form3Example1n1"id="form3Example1n1"> State
+          <input type="text" name="form3Example1ngen"id="form3Example1ngen">Gender
+          <input  type="text" name="form3Example9"id="form3Example9"> Date Of Birth
+          <input type="text" name="form3Example90"id="form3Example90" >Intrest
+            <input  type="text" name="form3Example99"id="form3Example99">Education
+            <input  type="text" name="form3Example8"id="form3Example8" >Enter E-mail Id
+            <input  type="text" name="form3Example97"id="form3Example97" >Enter Phone Number
+            <input type="password" id="formpassword1" name="formpassword1" placeholder="Password" required>Set password
+          <input type="password" id="formpassword2" name="formpassword2" placeholder=" Conform_Password" required>Conform Password
+
+            <!-- Add more input fields for additional signup information -->
+
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="termsCheckbox">
+                  <label class="form-check-label" for="termsCheckbox">
+                            I am a berojgar & accept all terms and conditions</a>
+                      </label>
+                   </div>
+
+                              <script>
+                     // Enable the submit button when the checkbox is checked
+                     document.getElementById("termsCheckbox").addEventListener("change", function() {
+                         document.getElementById("submitButton").disabled = !this.checked;
+                     });
+                 </script>
+
+                             <div class="d-flex justify-content-end pt-3">
+                               <button type="button" class="btn btn-light btn-lg">Reset all</button>
+                               <button type="submit" class="btn btn-warning btn-lg ms-2" id="submitButton" disabled  >Sign Up </button>
+             <!--                  <div><input type="submit" value="SUBMIT"></div>-->
+                             </div>
+        </form>
+
+
+        <p>Already have an account? <a href="{% url 'client_js_signin' %}">Login</a></p>
+    </div>
+</body>
+</html>

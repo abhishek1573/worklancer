@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client js index</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity= "sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../static/css/client_js_index.css">
+
+
+</head>
+<body>
+{% csrf_token %}
+
+<header>
+
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+
+      <form method="get" action="{% url 'search'%}">
+        <div class="nav-search">
+            <input class="search-box hov1" type="text" name="query" id="query" size="73px" placeholder="Search relevent jobs , company ,skills">
+
+            <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+    </form>
+
+
+    <a href="{% url 'client_js_signup' %}">SIgn up</a>
+    <a href="{% url 'about' %}">Contact</a>
+  </nav>
+
+</header>
+
+<div class="pannel">
+
+    <div class="p1">
+    <span class="pannel-data">
+        <select id="dropdown1" name="dropdown1" class="pannel-data">
+        <option value="option1">Graphics & Design</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <!-- Add more options as needed -->
+        </select>
+    </span>
+    </div>
+
+        <div class="p1">
+    <span class="pannel-data">
+        <select id="dropdown2" name="dropdown2" class="pannel-data">
+        <option value="option1">Programming & Tech</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <!-- Add more options as needed -->
+        </select>
+    </span>
+    </div>
+
+        <div class="p1">
+    <span class="pannel-data">
+        <select id="dropdown3" name="dropdown3" class="pannel-data">
+        <option value="option1">Art and animation</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <!-- Add more options as needed -->
+        </select>
+    </span>
+    </div>
+
+        <div class="p1">
+    <span class="pannel-data">
+        <select id="dropdown4" name="dropdown4" class="pannel-data">
+        <option value="option1">Writing & Translation</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <!-- Add more options as needed -->
+        </select>
+    </span>
+    </div>
+
+        <div class="p1">
+    <span class="pannel-data">
+        <select id="dropdown5" name="dropdown5" class="pannel-data">
+        <option value="option1">Graphics & Design</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <!-- Add more options as needed -->
+        </select>
+    </span>
+
+    </div>
+</div>
+
+<div class="job-pannel">
+    <div class="card">
+        <img src="image.jpg" alt="Card Image">
+        <div class="card-content">
+          <h2>Looking for Job ?</h2>
+          <p>give us skill ,we will give you money</p>
+          <a href="{% url 'jobdetail' %}"><button type="button" class="btn-bl">Get Hired</button></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="image.jpg" alt="Card Image">
+        <div class="card-content">
+          <h2>Admin-Berojgarmate</h2>
+          <p>only for the Admin of site.</p>
+         <a href="{% url 'admin_signup' %}"><button type="button" class="btn-bl">Sign Up</button></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="image.jpg" alt="Card Image">
+        <div class="card-content">
+          <h2>job giver</h2>
+          <p>you need a freelancer for your job ?</p>
+          <a href="{% url 'client_jg_signup' %}"><button type="button" class="btn-bl">Sign Up</button></a>
+        </div>
+      </div>
+</div>
+
+
+ <div class="card-container-new">
+        {% for i in crse%}
+            <div class="card-new" style="--card-color: {{ card.color }};">
+                <h2>{{ i.form_job_title }}</h2>
+                <p>{{ i.form_job_title }}</p>
+                <button type="button"  class="btn-bl" onclick=" window.open('/client_js/{{ i.form_job_title }}/{{i.form_job_skills}}', '_self')">Apply Now</button></a>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    &copy; 2023 worklancer.com
+  </footer>
+
+<!--    <script>-->
+<!--        // Function to open a new page with a specific title-->
+<!--        function openJobPage(jobId, jobTitle) {-->
+<!--            const newPage = window.open('job_apply_form.html', '_blank');-->
+<!--            newPage.document.title = jobTitle;-->
+<!--        }-->
+
+<!--        // Add event listeners to the buttons-->
+<!--        document.getElementById('').addEventListener('click', function() {-->
+<!--            openJobPage('job1', 'Job 1 Details');-->
+<!--        });-->
+
+<!--    </script>-->
+
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity= "sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../static/css/jobs.css">
+
+
+</head>
+<body>
+{% csrf_token %}
+
+<header>
+
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+
+      <form method="get" action="{% url 'search'%}">
+        <div class="nav-search">
+            <input class="search-box hov1" type="text" name="query" id="query" size="73px" placeholder="Search relevent jobs , company ,skills">
+
+            <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+    </form>
+
+
+    <a href="{% url 'client_js_signup' %}">SIgn up</a>
+    <a href="{% url 'about' %}">Contact</a>
+  </nav>
+
+</header>
+
+<h2>Welcome to site</h2>
+ <div class="card-container-new">
+        {% for i in crse%}
+            <div class="card-new" style="--card-color: {{ card.color }};">
+                <h2>{{ i.form_job_title }}</h2>
+                <p>{{ i.form_job_desc }}</p>
+                <button type="button"  class="btn-bl" onclick=" window.open('/client_js/{{ i.form_job_title }}/{{i.form_job_skills}}', '_self')">Apply Now</button></a>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <h3>Berojgarmate.com</h3>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+        </div>
+    </div>
+</footer>
+
+
+<!--    <script>-->
+<!--        // Function to open a new page with a specific title-->
+<!--        function openJobPage(jobId, jobTitle) {-->
+<!--            const newPage = window.open('job_apply_form.html', '_blank');-->
+<!--            newPage.document.title = jobTitle;-->
+<!--        }-->
+
+<!--        // Add event listeners to the buttons-->
+<!--        document.getElementById('').addEventListener('click', function() {-->
+<!--            openJobPage('job1', 'Job 1 Details');-->
+<!--        });-->
+
+<!--    </script>-->
+
+
+</body>
+</html>
