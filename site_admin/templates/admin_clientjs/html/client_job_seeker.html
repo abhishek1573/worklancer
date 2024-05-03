@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Table with clin Navbar</title>
+    <link rel="stylesheet" href="../../../static/css/client_js/client_js_job_apply.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="table-container">
+        <table class="colorful-table">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name </th>
+                    <th>User Id</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Email id</th>
+                    <th>Gender</th>
+                    <th>D.O.B</th>
+                    <th>Eduction</th>
+                    <th>Mobile number</th>
+                    <th>Operatios</th>
+           
+                </tr>
+            </thead>
+
+            <tbody>
+{% for i in cjd %}
+            <tr>
+                <td>{{i.first_name}}</td>
+                <td>{{i.last_name}} </td>
+                <td>{{i.userid}} </td>
+                <td>{{i.city}}</td>
+                <td>{{i.state}}</td>
+                <td>{{i.Email_id}}</td>
+                <td>{{i.gender}}</td>
+                <td>{{i.date_of_birth}}</td>
+                <td>{{i.education}}</td>
+                <td>{{i.mobile_number}}</td>
+                <td>
+                    <button type="button"  class="btn-bl" onclick=" window.open('/updatedata_js/{{i.userid}}', '_self')">UPDATE</button></a>
+                    <button type="button"  class="btn-bl" onclick=" window.open('/delete_js/{{i.userid}}', '_self')">Delete</button></a>
+                </td>
+                
+            </tr>
+{% endfor %}
+
+               <script>
+
+               </script>
+            </tbody>
+
+        </table>
+
+
+    </div>
+</body>
+</html>

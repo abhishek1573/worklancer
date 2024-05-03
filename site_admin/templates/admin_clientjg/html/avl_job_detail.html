@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/css/client_jg/avl_job_detail.css">
+    <title>Stylish Animated Table</title>
+</head>
+<body>
+
+    <div class="table-container">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Job id</th>
+                    <th>Client First Name</th>
+                    <th>Client Last name</th>
+                    <th>Job Img</th>
+                    <th>Email-id</th>
+                    <th>Job Title</th>
+                    <th>Phone number</th>
+                    <th>Country</th>
+                    <th>Job Description</th>
+                    <th>Job Skills</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for i in avl %}
+                <tr>
+
+                    <td>{{i.jobid }}</td>
+                    <td>{{i.form_first_name}}</td>
+                    <td>{{i.form_last_name }}</td>
+                    <td>{{i.job_image}}</td>
+                    <td>{{i.form_email}}</td>
+                    <td>{{i.form_job_title }}</td>
+                    <td>{{i.form_phno}}</td>
+                    <td>{{i.form_country}}</td>
+                    <td>{{i.form_job_desc  }}</td>
+                    <td>{{i.form_job_skills}}</td>
+                    <td>
+                    <button type="button"  class="btn-bl" onclick=" window.open('/updatedata_avl_jobs/{{i.jobid}}', '_self')">UPDATE</button></a>
+                    <button type="button"  class="btn-bl" onclick=" window.open('/delete_avl_jobs/{{i.jobid}}', '_self')">Delete</button></a>
+                    </td>
+
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+  /* Reset default styles for consistency */
+  body, h1, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define a background color and font styles */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the navigation bar */
+.navbar {
+    display: flex;
+    padding-inline  : 20px;
+    padding-top: 10px;
+}
+
+.container-main{
+    display: flex;
+    background: linear-gradient(to bottom right, #0a43ee, #fa04ee);
+    height: auto;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the search bar */
+.search-bar {
+    display: flex;
+    text-align: center;
+    padding-inline  : 40px;
+    padding-top: 15px;
+
+}
+
+.search-input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.search-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.nav-name-logout{
+    display: flex;
+    padding:auto;
+}
+
+.nav-para p{
+
+    background: linear-gradient(to bottom right, #0a43ee, #04d1fa);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+
+}
+
+.nav-logout-btn{
+    margin-inline: 20px;
+    padding: 20px;
+}
+
+.nav-logout-btn input{
+    background: linear-gradient(to bottom right, #ee066b, #b72db0);
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    border-color: aqua;
+
+}
+
+
+        /* Style for card container */
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        /* Style for individual cards */
+        .card {
+            width: 300px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Card title and content styles */
+        .card h2 {
+            font-size: 20px;
+        }
+
+        .card p {
+            font-size: 16px;
+        }
+
+
+    /* Styling for the attractive footer */
+    .attractive-footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Styling for social media icons */
+    .social-icons {
+        margin-top: 20px;
+    }
+
+    .social-icons a {
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+        margin: 0 10px;
+    }

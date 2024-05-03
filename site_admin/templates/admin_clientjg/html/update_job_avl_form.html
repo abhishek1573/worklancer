@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../../static/css/client_jg/update_job_avl_form.css">
+</head>
+<body>
+
+  <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="navbar-right">Contact</a>
+    </div>
+    <div class="container">
+        <h1>Job Detail Form</h1>
+
+
+            {% for i in cjd %}
+        <form action="{% url 'job_avl_form_update' pk=i.jobid%}" method="post">
+        {% csrf_token%}
+
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname"  value="{{i.form_first_name}}" required>
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" value="{{i.form_last_name}}" required>
+
+            <label for="jid">jobid</label>
+            <input type="text" id="jid" name="jid" value="{{i.jobid}}" required>
+
+            <label for="jimg">JOB Email </label>
+            <input type="image" id="jimg" name="jimg" value="{{i.jform_image}}" required>
+
+
+            <label for="jemail">JOB Email </label>
+            <input type="email" id="jemail" name="jemail" value="{{i.form_email}}" required>
+
+            <label for="jtitle">Job Title</label>
+            <input type="text" id="jtitle" name="jtitle" value="{{i.form_job_title}}" required>
+
+            <label for="phno">Phone number</label>
+            <input type="text" id="phno" name="phno" value="{{i.form_phno}}" required>
+
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" value="{{i.form_country}}" required>
+
+            <label for="desc">job Description</label>
+            <input id="desc" name="desc" value="{{i.form_job_desc}}" required>
+
+            <label for="skills">Skills</label>
+            <input type="text" id="skills" name="skills" value="{{i.form_job_skills}}" required>
+          {% endfor %}
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
